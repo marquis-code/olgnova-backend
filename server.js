@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const userRouter = require("./routes/user");
 
-app.use("/api/auth", userRouter);
+app.use("/api/v1", userRouter);
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
