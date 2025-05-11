@@ -88,9 +88,9 @@ router.post("/program-enquiry", async (req, res) => {
     const { organization_name, contact_name, contact_email, focus_area, organization_description} = req.body;
     
     // Basic validation
-    if (!firstName || !lastName || !email || !programName) {
+    if (!organization_name || !contact_name || !contact_email || !focus_area || !organization_description) {
       return res.status(400).json({
-        error: "Missing required fields. Please provide firstName, lastName, email, and programName."
+        error: "Missing required fields. Please provide Values for all fields."
       });
     }
 
